@@ -13,6 +13,7 @@ void loop() {
   float Temperature = DHT.getTemperature();
   float Humidity = DHT.getHumidity();
   //Look at the serial monitor
+  // 下の文float宣言したTemperatureを "℃"と一緒に扱えないので "℃"と同じstringにキャスト(変換)をして一緒にしている
   Serial.print(String(Temperature) + "℃");
   Serial.print(" / ");
   Serial.println(String(Humidity) + "％");
